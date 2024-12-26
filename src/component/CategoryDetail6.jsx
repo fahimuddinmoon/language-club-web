@@ -17,7 +17,7 @@ const CategoryDetail6 = () => {
 
     return (
         <div>
-            <h3 className='text-3xl font-extrabold text-center my-5'> All English Tutors</h3>
+            <h3 className='text-3xl font-extrabold text-center my-5'> All Chinese Tutors</h3>
             <div className='lg:grid lg:grid-cols-2 gap-4'>
                 {
                    sameData.map(data=> <CategoryDataShoe key={data._id} data={data}></CategoryDataShoe>)
