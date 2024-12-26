@@ -42,7 +42,7 @@ const ContextAPI = ({ children }) => {
         return () => {
             unSubscribe()
         }
-    }, [setUser])
+    }, [])
 
     const apiInfo = {
         user,

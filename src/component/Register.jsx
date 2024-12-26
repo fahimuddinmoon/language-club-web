@@ -7,7 +7,7 @@ import auth from "../firebase config";
 
 const Register = () => {
     const {createUser,googleLogin,profileUpdate,setUser,logout} = useContext(AuthContext)
-    const navigate = useNavigate()
+   
     const handleSubmit = (e) => {
         e.preventDefault()
         const name = e.target.name.value
