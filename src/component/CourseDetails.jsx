@@ -9,19 +9,19 @@ const CourseDetails = () => {
     const { _id } = useParams()
     const [info, setInfo] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/addCourse/${_id}`)
+        fetch(`https://language-course-server.vercel.app/addCourse/${_id}`)
             .then(res => res.json())
             .then(data => setInfo(data))
     }, [])
     const {_id:jobId,Name, email, language, Description, price, image, review } =info    
     const loggedEmail = user?.email
-
+ 
 
     const handleBook = async () => {
        if(loggedEmail === email)
         return alert('Action Not Permitted')
        const bookData = {jobId,image,language,price,email,loggedEmail,Name}
-       const {data} = await axios.post('http://localhost:5000/allBookedData',bookData)
+       const {data} = await axios.post('https://language-course-server.vercel.app/allBookedData',bookData)
         if(data.insertedId){
                         Swal.fire({
                             title: "Course Added Successfully!",

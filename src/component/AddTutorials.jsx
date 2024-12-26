@@ -16,7 +16,7 @@ const AddTutorials = () => {
         const image = e.target.image.value
         const item = { Name, email, language, Description, price, image, review: 0 }
 
-        const {data} = await axios.post('http://localhost:5000/addCourse',item)
+        const {data} = await axios.post('https://language-course-server.vercel.app/addCourse',item)
         if(data.insertedId){
                         Swal.fire({
                             title: "Course Added Successfully!",

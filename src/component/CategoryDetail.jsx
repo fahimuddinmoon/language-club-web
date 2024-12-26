@@ -5,7 +5,7 @@ const CategoryDetail = () => {
     const [allData, setAllData] = useState([])
     const [sameData, setSameData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addCourse')
+        fetch('https://language-course-server.vercel.app/addCourse')
             .then(res => res.json())
             .then(data => setAllData(data))
     }, [])

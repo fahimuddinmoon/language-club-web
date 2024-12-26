@@ -10,13 +10,13 @@ const State = () => {
     const [courses, setCourses] = useState([])
     const [booked, setBooked] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addCourse')
+        fetch('https://language-course-server.vercel.app/addCourse')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBookedData')
+        fetch('https://language-course-server.vercel.app/allBookedData')
             .then(res => res.json())
             .then(data => setBooked(data))
     }, [])

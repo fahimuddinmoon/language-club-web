@@ -8,7 +8,7 @@ const FindTutors = () => {
     const [search, setSearch] = useState('')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/ALLCourse?search=${search}`)
+        fetch(`https://language-course-server.vercel.app/ALLCourse?search=${search}`)
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [search])

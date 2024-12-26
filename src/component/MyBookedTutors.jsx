@@ -9,14 +9,14 @@ const MyBookedTutors = () => {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allBookedData/${user?.email}`)
+        fetch(`https://language-course-server.vercel.app/allBookedData/${user?.email}`)
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [user?.email])
     console.log(courses)
 
     const handleReview = async (id) => {
-        const {data} = await axios.patch(`http://localhost:5000/allBookedData/${id}`)
+        const {data} = await axios.patch(`https://language-course-server.vercel.app/allBookedData/${id}`)
         if(data.acknowledged){
                         Swal.fire({
                             title: "Review Added Successfully!",

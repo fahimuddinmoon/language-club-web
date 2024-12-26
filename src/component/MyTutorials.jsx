@@ -15,14 +15,14 @@ const MyTutorials = () => {
     }, [user?.email])
 
     const info = () => {
-        fetch(`http://localhost:5000/allCourse/${user?.email}`)
+        fetch(`https://language-course-server.vercel.app/allCourse/${user?.email}`)
             .then(res => res.json())
             .then(data => setCourses(data))
     }
 
     console.log(courses)
     const handleDelete = async (id) => {
-        const { data } = await axios.delete(`http://localhost:5000/delete/${id}`)
+        const { data } = await axios.delete(`https://language-course-server.vercel.app/delete/${id}`)
         info()
         if (data.acknowledged) {
             Swal.fire({

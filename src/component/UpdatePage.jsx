@@ -10,7 +10,7 @@ const UpdatePage = () => {
     const { _id } = useParams()
      const [info, setInfo] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/addCourse/${_id}`)
+        fetch(`https://language-course-server.vercel.app/addCourse/${_id}`)
         .then(res => res.json())
         .then(data => setInfo(data))
     },[])
@@ -26,7 +26,7 @@ const UpdatePage = () => {
         const price = e.target.price.value
         const image = e.target.image.value
         const UpData = {Name,email,image,language,price,review,Description}
-        const {data} = await axios.put(`http://localhost:5000/addCourse/${id}`,UpData)
+        const {data} = await axios.put(`https://language-course-server.vercel.app/addCourse/${id}`,UpData)
         
         if(data.modifiedCount){
                         Swal.fire({
