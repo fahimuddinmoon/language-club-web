@@ -6,8 +6,8 @@ const CategoryDataShoe = ({ data }) => {
     const { Description, Name, email, image, language, price, review } = data
     return (
         <Link to='/find-tutors'>
-            <div className=" border rounded-xl p-5 sm:flex gap-9 mb-8">
-                <img className="mx-auto w-40   sm:w-48 object-cover rounded-xl" src={image} alt="" />
+            <div className=" border rounded-xl p-5  gap-9 mb-8">
+                <img className="mx-auto w-40   sm:w-48 object-cover rounded-xl mb-6" src={image} alt="" />
                 <div>
 
                     <p className="text-2xl font-bold mb-2"> Tutor Name : {Name}</p>

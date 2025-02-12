@@ -4,6 +4,7 @@ import auth from "../firebase config";
 export const AuthContext = createContext(null)
 const ContextAPI = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [dark, setDark] = useState(false)
     const [loading, setLoading] = useState(true)
     const provider = new GoogleAuthProvider()
     const googleLogin = () => {
@@ -52,7 +53,9 @@ const ContextAPI = ({ children }) => {
         createUser,
         profileUpdate,
         login,
-        logout
+        logout,
+        dark,
+        setDark
     }
 
     return (

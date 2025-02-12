@@ -35,18 +35,18 @@ const CourseDetails = () => {
 
 
     return (
-        <div className="w-10/12 mx-auto p-4 ">
+        <div className="w-10/12 mx-auto p-4 pt-24 text-black">
             <div className=" text-center  z-10">
                 <h1 className='text-4xl font-bold  py-4'>
                     Course Details
                 </h1>
-                <p className='text-sm font-semibold lg:px-60 py-4'>
+                <p className='text-sm font-semibold lg:px-60 pt-4 pb-8'>
                     Explore the latest product that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                 </p>
             </div>
-            <div className=" w-full lg:w-8/12 lg:grid lg:grid-cols-2 gap-9 p-5 bg-slate-200 mx-auto   rounded-lg ">
+            <div className=" p-5 bg-slate-200    rounded-lg ">
                 <div className="">
-                    <img className="w-full h-full rounded-lg" src={image} alt="" />
+                    <img className="w-20 h-20 object-cover border-4 border-blue-500 rounded-full" src={image} alt="" />
                 </div>
                 <div >
                     <h2 className="text-2xl font-bold mb-2">Tutor Name : {Name}</h2>

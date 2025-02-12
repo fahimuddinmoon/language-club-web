@@ -1,18 +1,21 @@
 import { Outlet } from "react-router-dom";
 import NavBer from "./NavBer";
 import Footer from "./Footer";
+import { useContext } from "react";
+import { AuthContext } from "./ContextAPI";
 
 
 const MainLayout = () => {
+    const { user , logout , dark ,setDark} = useContext(AuthContext)
     return (
-        <div className="sm:w-11/12 mx-auto my-8">
+        <div className={dark === true? 'bg-black text-white':''}>
             <div>
                 <NavBer></NavBer>
             </div>
-            <div className="pl-5 pr-5">
+            <div >
                 <Outlet></Outlet>
             </div>
-            <div className="p-5">
+            <div >
                 <Footer></Footer>
             </div>
 

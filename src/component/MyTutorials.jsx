@@ -38,12 +38,12 @@ const MyTutorials = () => {
 
    
     return (
-        <div>
-            <h2>My Tutorial</h2>
+        <div className={courses.length <  5?'px-5 pt-24 h-screen' : 'px-7 pt-24'}>
+            <h2 className="text-2xl text-center my-3  font-extrabold">My Tutorial</h2>
             <div className="overflow-x-auto">
                 <table className="table table-xs">
                     <thead>
-                        <tr>
+                        <tr className="text-blue-600">
                             <th>Image</th>
                             <th>Name</th>
                             <th>Language</th>

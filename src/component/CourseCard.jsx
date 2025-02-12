@@ -20,7 +20,7 @@ const CourseCard = ({ course }) => {
                 <p className="text-xl font-semibold mb-2">Price :- {price}</p>
                 <p className="text-xl font-semibold mb-2">Review :- {review}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/detail/${_id}`} className="btn btn-primary">Details</Link>
+                    <Link to={`/detail/${_id}`} className="btn font-bold bg-blue-600 text-white">Details</Link>
                 </div>
             </div>
         </div>

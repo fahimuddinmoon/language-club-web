@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 .active{
-    text-decoration: underline;
-    color: rgba(235, 34, 34, 0.942);
-    font-size: large;
+  
+    background-color: rgb(68, 68, 250);
+    border-radius: 3px;
+    color: white;
 }

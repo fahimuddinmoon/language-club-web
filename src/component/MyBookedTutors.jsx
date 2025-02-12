@@ -13,7 +13,7 @@ const MyBookedTutors = () => {
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [user?.email])
-    console.log(courses)
+   
 
     const handleReview = async (id) => {
         const {data} = await axios.patch(`https://language-course-server.vercel.app/allBookedData/${id}`)
@@ -29,13 +29,13 @@ const MyBookedTutors = () => {
     }
 
     return (
-        <div className="w-full">
+        <div className={courses.length < 5?'px-5 pt-24 h-screen' : 'px-5 pt-24'}>
             <h2 className="text-2xl font-extrabold py-6 text-center">Booked Tutors</h2>
             <div>
                 <div className="">
                     <table className="table p-0 m-0 ">
                         <thead>
-                            <tr>
+                            <tr className="text-blue-600">
                                 <th></th>
                                 <th>Name</th>
                                 <th>Photo</th>

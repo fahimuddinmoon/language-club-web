@@ -28,7 +28,7 @@ const AddTutorials = () => {
 
     }
     return (
-        <div className="w-10/12 mx-auto px-4">
+        <div className="w-10/12 mx-auto px-4 pt-24 text-black">
             <h2 className="text-center text-2xl font-bold my-6">Add Equipment</h2>
             <div className="card bg-base-100 w-full  shrink-0 shadow-2xl">
                 <form onSubmit={handleSubmit} className="card-body">
